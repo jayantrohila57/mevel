@@ -9,44 +9,18 @@ import {
   HomeIcon,
   TagIcon,
   TiersIcon,
-  TrendUpwardIcon
+  TrendUpwardIcon,
+  UserIcon
 } from '@sanity/icons'
 import { Iframe } from 'sanity-plugin-iframe-pane'
 import type { StructureBuilder } from 'sanity/desk'
 
-import { iframeOptions } from '../draft/draftViewSettings'
+import { iframeOptions } from './custom/draftViewSettings'
 
 export const generalStructure = (S: StructureBuilder) =>
   S.list()
     .title('Website Content')
     .items([
-      S.listItem()
-        .title('Site Settings')
-        .icon(CogIcon)
-        .child(
-          S.list()
-            .title('Site Settings')
-            .items([
-              S.listItem()
-                .title('Global SEO')
-                .icon(TrendUpwardIcon)
-                .child(
-                  S.document().schemaType('globalSEO').documentId('globalSEO')
-                ),
-              S.listItem()
-                .title('Main Navigation')
-                .icon(BlockElementIcon)
-                .child(
-                  S.document().schemaType('navigation').documentId('navigation')
-                ),
-              S.listItem()
-                .title('Footer Links')
-                .icon(BlockElementIcon)
-                .child(S.document().schemaType('footer').documentId('footer')),
-              S.divider()
-            ])
-        ),
-      S.divider(),
       S.listItem()
         .title('Home page')
         .icon(HomeIcon)
@@ -104,6 +78,28 @@ export const generalStructure = (S: StructureBuilder) =>
                       S.document()
                         .id(childId)
                         .schemaType('blog')
+                        .views([
+                          S.view.form(),
+                          S.view
+                            .component(Iframe)
+                            .options(iframeOptions)
+                            .title('Draft View')
+                        ])
+                    )
+                ),
+              S.listItem()
+                .title('Authors')
+                .icon(UserIcon)
+                .child(
+                  S.documentList()
+                    .title('Authors')
+                    .apiVersion(apiVersion)
+                    .filter('_type == "author"')
+                    .defaultOrdering([{ field: 'name', direction: 'asc' }])
+                    .child((childId) =>
+                      S.document()
+                        .id(childId)
+                        .schemaType('author')
                         .views([
                           S.view.form(),
                           S.view
@@ -185,5 +181,33 @@ export const generalStructure = (S: StructureBuilder) =>
                     )
                 )
             ])
-        )
+        ),
+      S.divider(),
+      S.listItem()
+        .title('Site Settings')
+        .icon(CogIcon)
+        .child(
+          S.list()
+            .title('Site Settings')
+            .items([
+              S.listItem()
+                .title('Global SEO')
+                .icon(TrendUpwardIcon)
+                .child(
+                  S.document().schemaType('globalSEO').documentId('globalSEO')
+                ),
+              S.listItem()
+                .title('Main Navigation')
+                .icon(BlockElementIcon)
+                .child(
+                  S.document().schemaType('navigation').documentId('navigation')
+                ),
+              S.listItem()
+                .title('Footer Links')
+                .icon(BlockElementIcon)
+                .child(S.document().schemaType('footer').documentId('footer')),
+              S.divider()
+            ])
+        ),
+      S.divider()
     ])

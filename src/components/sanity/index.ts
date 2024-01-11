@@ -2,7 +2,7 @@
 import { Iframe } from 'sanity-plugin-iframe-pane'
 import type { DefaultDocumentNodeResolver } from 'sanity/desk'
 
-import { iframeOptions } from '../draft/draftViewSettings'
+import { iframeOptions } from './custom/draftViewSettings'
 
 export const defaultDocumentNode: DefaultDocumentNodeResolver = (
   S,

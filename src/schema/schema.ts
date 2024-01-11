@@ -1,9 +1,12 @@
 import {
+  type ArrayDefinition,
   type DocumentDefinition,
+  type ImageDefinition,
   type ObjectDefinition,
   type SchemaTypeDefinition
 } from 'sanity'
 
+import author from './documents/blog/author'
 import blog from './documents/blog/blog'
 import category from './documents/blog/category'
 import tag from './documents/blog/tag'
@@ -14,6 +17,9 @@ import page from './documents/pages/page'
 import footer from './documents/settings/footer'
 import globalSEO from './documents/settings/globalSEO'
 import navigation from './documents/settings/navigation'
+import blockContent from './objects/blog/blockContent'
+import image from './objects/blog/image'
+import youtube from './objects/blog/youtube'
 import menu from './objects/navigation/menu'
 import menuItemLink from './objects/navigation/menuItemLink'
 import menuItemPage from './objects/navigation/menuItemPage'
@@ -25,17 +31,19 @@ export const pageDocuments: DocumentDefinition[] = [
   blog,
   category,
   tag,
-  faq
+  faq,
+  author
 ]
 export const objects: ObjectDefinition[] = [
-  social,
   seo,
   menu,
   menuItemLink,
   menuItemPage,
-  accordion
+  accordion,
+  youtube
 ]
-export const pageComponents: ObjectDefinition[] = []
+export const imageComponents: ImageDefinition[] = [image]
+export const components: ArrayDefinition[] = [social, blockContent]
 export const singletonDocuments: DocumentDefinition[] = [
   navigation,
   footer,
@@ -44,9 +52,10 @@ export const singletonDocuments: DocumentDefinition[] = [
 ]
 
 export const schemaTypes: SchemaTypeDefinition[] = [
+  ...components,
   ...pageDocuments,
   ...singletonDocuments,
-  ...pageComponents,
+  ...imageComponents,
   ...objects
 ]
 export const schema: { types: SchemaTypeDefinition[] } = {

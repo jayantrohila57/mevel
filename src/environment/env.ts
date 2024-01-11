@@ -11,6 +11,19 @@ export const envHost = `http${
     : ''
 }://${process.env.SANITY_STUDIO_VERCEL_URL}`
 
+export const baseUrl = `http${
+  ['production', 'preview'].includes(process.env.SANITY_STUDIO_VERCEL_ENV || '')
+    ? 's'
+    : ''
+}://${process.env.SANITY_STUDIO_VERCEL_URL}`
+
+export const basePath = '/studio'
+
+export const name = assertValue(
+  process.env.NEXT_PUBLIC_SANITY_STUDIO_NAME,
+  'Missing environment variable: NEXT_PUBLIC_SANITY_STUDIO_NAME'
+)
+
 export const previewSecretId: `${string}.${string}` = 'preview.secret'
 
 // Used to generate URLs for previewing your content

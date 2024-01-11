@@ -13,7 +13,7 @@ module.exports = {
   semi: false,
   singleQuote: true,
   bracketSpacing: true,
-  importOrder: ['^@core/(.*)$', '^@server/(.*)$', '^@ui/(.*)$', '^[./]'],
+  importOrder: ['^@core/(.*)$', '^@components/(.*)$', '^@ui/(.*)$', '^[./]'],
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
   plugins: [

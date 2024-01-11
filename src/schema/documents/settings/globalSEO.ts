@@ -37,19 +37,42 @@ export default defineType({
           .warning(`A title shouldn't be more than 160 characters.`)
     }),
     defineField({
-      name: 'globalSEOImage',
-      description:
-        'This is the meta image presented in search and social on all pages where it is not defined.',
-      title: 'Global Image',
+      name: 'canonical',
+      title: 'Canonical URL',
+      type: 'string',
+      description: 'The main site url. Used to create canonical url'
+    }),
+    defineField({
+      title: 'Main logo',
+      description: 'Upload your main logo here. SVG preferred. ',
+      name: 'logo',
       type: 'image',
       fields: [
-        {
+        defineField({
           name: 'alt',
           type: 'string',
-          title: 'Alternative text'
-        }
-      ],
-      validation: (Rule) => Rule.required()
+          title: 'Alternative text',
+          description: 'Important for SEO and accessibility.'
+        })
+      ]
+    }),
+    defineField({
+      name: 'email',
+      type: 'string',
+      title: 'Support Email',
+      validation: (Rule) =>
+        Rule.regex(
+          /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,
+          {
+            name: 'email',
+            invert: false
+          }
+        )
+    }),
+    defineField({
+      name: 'phone',
+      type: 'string',
+      title: 'Support Phone'
     })
   ]
 })
