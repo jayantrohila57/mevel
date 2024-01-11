@@ -1,11 +1,16 @@
+/** @type {import('prettier').Config & import('prettier-plugin-tailwindcss').PluginOptions} */
 module.exports = {
-  tabWidth: 2,
   printWidth: 80,
   endOfLine: 'auto',
   arrowParens: 'always',
   trailingComma: 'none',
-  semi: false,
+  tabWidth: 2,
+  bracketSameLine: true,
+  jsxSingleQuote: true,
+  quoteProps: 'consistent',
+  singleAttributePerLine: true,
   useTabs: false,
+  semi: false,
   singleQuote: true,
   bracketSpacing: true,
   importOrder: ['^@core/(.*)$', '^@server/(.*)$', '^@ui/(.*)$', '^[./]'],

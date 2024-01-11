@@ -5,8 +5,17 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@portabletext/react':
+    specifier: ^3.0.11
+    version: registry.npmjs.org/@portabletext/react@3.0.11(react@18.2.0)
+  '@sanity/client':
+    specifier: ^6.10.0
+    version: registry.npmjs.org/@sanity/client@6.10.0
+  '@sanity/icons':
+    specifier: ^2.8.0
+    version: registry.npmjs.org/@sanity/icons@2.8.0(react@18.2.0)
   '@sanity/image-url':
-    specifier: '1'
+    specifier: ^1.0.2
     version: registry.npmjs.org/@sanity/image-url@1.0.2
   '@sanity/vision':
     specifier: '3'
@@ -24,7 +33,7 @@ dependencies:
     specifier: 14.0.4
     version: registry.npmjs.org/next@14.0.4(@babel/core@7.23.7)(react-dom@18.2.0)(react@18.2.0)
   next-sanity:
-    specifier: '7'
+    specifier: ^7.0.7
     version: registry.npmjs.org/next-sanity@7.0.7(@sanity/client@6.10.0)(@sanity/icons@2.8.0)(@sanity/types@3.23.4)(@sanity/ui@1.9.3)(next@14.0.4)(react@18.2.0)(sanity@3.23.4)(styled-components@6.1.6)
   next-themes:
     specifier: ^0.2.1
@@ -38,6 +47,9 @@ dependencies:
   sanity:
     specifier: '3'
     version: registry.npmjs.org/sanity@3.23.4(@types/node@20.10.6)(@types/react@18.2.47)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.1.6)
+  sanity-plugin-iframe-pane:
+    specifier: ^3.1.3
+    version: registry.npmjs.org/sanity-plugin-iframe-pane@3.1.3(@sanity/client@6.10.0)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(sanity@3.23.4)(styled-components@6.1.6)
   styled-components:
     specifier: '6'
     version: registry.npmjs.org/styled-components@6.1.6(react-dom@18.2.0)(react@18.2.0)
@@ -1713,6 +1725,17 @@ packages:
       mnemonist: registry.npmjs.org/mnemonist@0.39.6
     dev: false
 
+  registry.npmjs.org/@sanity/icons@1.3.10(react@18.2.0):
+    resolution: {integrity: sha512-5wVG/vIiGuGrSmq+Bl3PY7XDgQrGv0fyHdJI64FSulnr2wH3NMqZ6C59UFxnrZ93sr7kOt0zQFoNv2lkPBi0Cg==, tarball: https://registry.npmjs.org/@sanity/icons/-/icons-1.3.10.tgz}
+    id: registry.npmjs.org/@sanity/icons/1.3.10
+    name: '@sanity/icons'
+    version: 1.3.10
+    peerDependencies:
+      react: ^16.9 || ^17 || ^18
+    dependencies:
+      react: registry.npmjs.org/react@18.2.0
+    dev: false
+
   registry.npmjs.org/@sanity/icons@2.8.0(react@18.2.0):
     resolution: {integrity: sha512-Q8aKg+KPJPDLDR+beYZhtB3gYdq7zIyZQZ6HjaB/63KuidHzkIFuhVv8JS/rJNwWOn5lTuzmd+L/+U/Pv3klWw==, tarball: https://registry.npmjs.org/@sanity/icons/-/icons-2.8.0.tgz}
     id: registry.npmjs.org/@sanity/icons/2.8.0
@@ -1758,6 +1781,21 @@ packages:
       tar-fs: registry.npmjs.org/tar-fs@2.1.1
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  registry.npmjs.org/@sanity/incompatible-plugin@1.0.4(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-2z39G9PTM8MXOF4fJNx3TG4tH0RrTjtH6dVLW93DSjCPbIS7FgCY5yWjZfQ+HVkwhLsF7ATDAGLA/jp65pFjAg==, tarball: https://registry.npmjs.org/@sanity/incompatible-plugin/-/incompatible-plugin-1.0.4.tgz}
+    id: registry.npmjs.org/@sanity/incompatible-plugin/1.0.4
+    name: '@sanity/incompatible-plugin'
+    version: 1.0.4
+    peerDependencies:
+      react: ^16.9 || ^17 || ^18
+      react-dom: ^16.9 || ^17 || ^18
+    dependencies:
+      '@sanity/icons': registry.npmjs.org/@sanity/icons@1.3.10(react@18.2.0)
+      react: registry.npmjs.org/react@18.2.0
+      react-copy-to-clipboard: registry.npmjs.org/react-copy-to-clipboard@5.1.0(react@18.2.0)
+      react-dom: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
     dev: false
 
   registry.npmjs.org/@sanity/logos@2.1.4(@sanity/color@3.0.0-beta.9)(react@18.2.0):
@@ -7317,6 +7355,33 @@ packages:
       '@sanity/diff-match-patch': registry.npmjs.org/@sanity/diff-match-patch@3.1.1
     dev: false
 
+  registry.npmjs.org/sanity-plugin-iframe-pane@3.1.3(@sanity/client@6.10.0)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(sanity@3.23.4)(styled-components@6.1.6):
+    resolution: {integrity: sha512-QdOjNVA4Jj+ybAt0adTWPv9Dvp//IChV5zv6gSrTCOTaSrPt4ttgIPvKIjkFS7EoHadjZQ9c+8F+9Dxo2GlyBw==, tarball: https://registry.npmjs.org/sanity-plugin-iframe-pane/-/sanity-plugin-iframe-pane-3.1.3.tgz}
+    id: registry.npmjs.org/sanity-plugin-iframe-pane/3.1.3
+    name: sanity-plugin-iframe-pane
+    version: 3.1.3
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: ^18.2.0
+      sanity: ^3.20.0
+      styled-components: ^5.2 || ^6.0.0
+    dependencies:
+      '@sanity/icons': registry.npmjs.org/@sanity/icons@2.8.0(react@18.2.0)
+      '@sanity/incompatible-plugin': registry.npmjs.org/@sanity/incompatible-plugin@1.0.4(react-dom@18.2.0)(react@18.2.0)
+      '@sanity/preview-url-secret': registry.npmjs.org/@sanity/preview-url-secret@1.4.1(@sanity/client@6.10.0)(@sanity/icons@2.8.0)(sanity@3.23.4)
+      '@sanity/ui': registry.npmjs.org/@sanity/ui@1.9.3(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@6.1.6)
+      framer-motion: registry.npmjs.org/framer-motion@10.17.9(react-dom@18.2.0)(react@18.2.0)
+      react: registry.npmjs.org/react@18.2.0
+      sanity: registry.npmjs.org/sanity@3.23.4(@types/node@20.10.6)(@types/react@18.2.47)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.1.6)
+      styled-components: registry.npmjs.org/styled-components@6.1.6(react-dom@18.2.0)(react@18.2.0)
+      suspend-react: registry.npmjs.org/suspend-react@0.1.3(react@18.2.0)
+      usehooks-ts: registry.npmjs.org/usehooks-ts@2.9.1(react-dom@18.2.0)(react@18.2.0)
+    transitivePeerDependencies:
+      - '@sanity/client'
+      - react-dom
+      - react-is
+    dev: false
+
   registry.npmjs.org/sanity@3.23.4(@types/node@20.10.6)(@types/react@18.2.47)(react-dom@18.2.0)(react@18.2.0)(styled-components@6.1.6):
     resolution: {integrity: sha512-KUzyA4+1/bLiL24HQNBMYtOwzZOaKh/dGDZ/Y9FVPsUFr2iyr8Mer6T1e/UT/4Lw2iQB6myfF4IfnEaqdvuWJA==, tarball: https://registry.npmjs.org/sanity/-/sanity-3.23.4.tgz}
     id: registry.npmjs.org/sanity/3.23.4
@@ -8455,6 +8520,20 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       react: registry.npmjs.org/react@18.2.0
+    dev: false
+
+  registry.npmjs.org/usehooks-ts@2.9.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-2FAuSIGHlY+apM9FVlj8/oNhd+1y+Uwv5QNkMQz1oSfdHk4PXo1qoCw9I5M7j0vpH8CSWFJwXbVPeYDjLCx9PA==, tarball: https://registry.npmjs.org/usehooks-ts/-/usehooks-ts-2.9.1.tgz}
+    id: registry.npmjs.org/usehooks-ts/2.9.1
+    name: usehooks-ts
+    version: 2.9.1
+    engines: {node: '>=16.15.0', npm: '>=8'}
+    peerDependencies:
+      react: ^16.8.0  || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0  || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: registry.npmjs.org/react@18.2.0
+      react-dom: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
     dev: false
 
   registry.npmjs.org/util-deprecate@1.0.2:

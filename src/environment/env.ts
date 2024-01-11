@@ -5,6 +5,17 @@ function assertValue<T>(v: T | undefined, errorMessage: string): T {
 
   return v
 }
+export const envHost = `http${
+  ['production', 'preview'].includes(process.env.SANITY_STUDIO_VERCEL_ENV || '')
+    ? 's'
+    : ''
+}://${process.env.SANITY_STUDIO_VERCEL_URL}`
+
+export const previewSecretId: `${string}.${string}` = 'preview.secret'
+
+// Used to generate URLs for previewing your content
+export const SANITY_STUDIO_PREVIEW_BASE_URL =
+  process.env.SANITY_STUDIO_PREVIEW_BASE_URL || '/api/draft'
 
 export const apiVersion =
   process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2024-01-06'
