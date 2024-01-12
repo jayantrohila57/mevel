@@ -74,3 +74,29 @@
     @apply bg-background text-foreground;
   }
 }
+
+.dot-matrix {
+  width: 100%;
+  height: 100%;
+  background-image: url(/dot.png);
+  background-repeat: repeat;
+}
+::selection {
+  @apply bg-accent text-black dark:text-white;
+}
+
+::-webkit-scrollbar {
+  @apply h-2 w-2;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply h-2 w-2;
+}

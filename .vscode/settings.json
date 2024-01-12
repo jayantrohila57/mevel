@@ -8,5 +8,5 @@
     "typescriptreact"
   ],
   "prettier.configPath": ".prettierrc.js",
-  "cSpell.words": ["Codemevel", "GROQ"]
+  "cSpell.words": ["Codemevel", "GROQ", "lucide"]
 }

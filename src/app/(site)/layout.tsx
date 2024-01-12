@@ -1,7 +1,14 @@
-export default function RootLayout({
+import { HeadersNav } from '@/components/layout/Header'
+
+export default async function RootLayout({
   children
 }: {
   children: React.ReactNode
 }) {
-  return <>{children}</>
+  return (
+    <>
+      <HeadersNav />
+      {children}
+    </>
+  )
 }
