@@ -11,7 +11,6 @@
 11. FAQ
 12. Footer
 
-
 gallery 2,3,4
 carousel 2,3,4
 grid 2,3,4

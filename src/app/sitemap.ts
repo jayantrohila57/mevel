@@ -8,7 +8,7 @@ const routes = [
   '/privacy',
   '/terms',
   '/services',
-  '/work',
+  '/work'
 ]
 const baseUrl = process.env.NEXT_PUBLIC_URL
   ? `${process.env.NEXT_PUBLIC_URL}`
@@ -20,7 +20,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${baseUrl}${route}`,
       lastModified: new Date().toISOString(),
       changeFrequency: 'always',
-      priority: 1,
+      priority: 1
     }
   })
 

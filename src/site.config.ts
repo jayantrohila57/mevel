@@ -1,5 +1,6 @@
 export const site = {
   name: 'Codemevel',
-  description:
-    'Beautifully designed components that you can copy and paste into your apps. Accessible.Customizable. Open Source.'
+  description: 'Codemevel Provides Exceptional Web Solutions For Business',
+  subHeading:
+    'Explore the experiences of our satisfied clients and their journey with Codemevel.'
 }

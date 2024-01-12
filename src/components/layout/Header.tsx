@@ -58,91 +58,113 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function HeadersNav() {
   return (
-    <div className='flex h-14 w-full flex-row items-center justify-between border backdrop-blur-lg md:px-5'>
-      <Link href='/'>
-        <Button variant='ghost'>
-          <div className='flex flex-row items-center justify-center gap-2'>
-            <Icons.logo />
-            <div className='mt-1 text-lg font-medium'>{site.name}</div>
-          </div>
-        </Button>
-      </Link>
-      <NavigationMenu>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className='grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]'>
-                <li className='row-span-3'>
-                  <NavigationMenuLink asChild>
-                    <a
-                      className='flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md'
-                      href='/'>
-                      <Icons.logo className='h-16 w-16' />
-                      <div className='mb-2 mt-4 text-lg font-medium'>
-                        {site.name}
-                      </div>
-                      <p className='text-sm leading-tight text-muted-foreground'>
-                        {site.description}
-                      </p>
-                    </a>
-                  </NavigationMenuLink>
-                </li>
-                <ListItem
-                  href='/docs'
-                  title='Introduction'>
-                  Re-usable components built using Radix UI and Tailwind CSS.
-                </ListItem>
-                <ListItem
-                  href='/docs/installation'
-                  title='Installation'>
-                  How to install dependencies and structure your app.
-                </ListItem>
-                <ListItem
-                  href='/docs/primitives/typography'
-                  title='Typography'>
-                  Styles for headings, paragraphs, lists...etc
-                </ListItem>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className='grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] '>
-                {components.map((component) => (
-                  <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}>
-                    {component.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link
-              href='/docs'
-              legacyBehavior
-              passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Documentation
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-      <div className='flex items-center justify-center gap-2'>
-        <ModeToggle />
-        <Link
-          href='/contact'
-          legacyBehavior
-          passHref>
-          <Button>Contact us</Button>
+    <nav className='sticky top-0 z-50 w-full  '>
+      <div className='flex h-14 w-full flex-row items-center justify-between border backdrop-blur-lg md:px-5'>
+        <Link href='/'>
+          <Button variant='ghost'>
+            <div className='flex flex-row items-center justify-center gap-1'>
+              <Icons.logo />
+              <div className='mt-1 text-lg font-medium'>{site.name}</div>
+            </div>
+          </Button>
         </Link>
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <Link
+                href='/'
+                legacyBehavior
+                passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Home
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className='grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]'>
+                  <li className='row-span-3'>
+                    <NavigationMenuLink asChild>
+                      <a
+                        className='flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md'
+                        href='/'>
+                        <Icons.logo className='h-30 w-30' />
+                        <div className='mb-2 mt-4 text-lg font-medium'>
+                          {site.name}
+                        </div>
+                        <p className='text-sm leading-tight text-muted-foreground'>
+                          {site.description}
+                        </p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
+                  <ListItem
+                    href='/docs'
+                    title='Introduction'>
+                    Re-usable components built using Radix UI and Tailwind CSS.
+                  </ListItem>
+                  <ListItem
+                    href='/docs/installation'
+                    title='Installation'>
+                    How to install dependencies and structure your app.
+                  </ListItem>
+                  <ListItem
+                    href='/docs/primitives/typography'
+                    title='Typography'>
+                    Styles for headings, paragraphs, lists...etc
+                  </ListItem>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className='grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] '>
+                  {components.map((component) => (
+                    <ListItem
+                      key={component.title}
+                      title={component.title}
+                      href={component.href}>
+                      {component.description}
+                    </ListItem>
+                  ))}
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link
+                href='/blog'
+                legacyBehavior
+                passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Blog
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link
+                href='/about'
+                legacyBehavior
+                passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  About
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+        <div className='flex items-center justify-center gap-2'>
+          <ModeToggle />
+          <Link
+            href='/contact'
+            legacyBehavior
+            passHref>
+            <Button variant={'outline'}>Contact us</Button>
+          </Link>
+        </div>
       </div>
-    </div>
+    </nav>
   )
 }
 

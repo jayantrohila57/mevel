@@ -38,6 +38,9 @@ dependencies:
   '@sanity/vision':
     specifier: '3'
     version: registry.npmjs.org/@sanity/vision@3.23.4(@babel/runtime@7.23.7)(@codemirror/lint@6.4.2)(@codemirror/state@6.4.0)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.0)(codemirror@6.0.1)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@6.1.6)
+  '@studio-freight/lenis':
+    specifier: ^1.0.33
+    version: registry.npmjs.org/@studio-freight/lenis@1.0.33
   class-variance-authority:
     specifier: ^0.7.0
     version: registry.npmjs.org/class-variance-authority@0.7.0
@@ -3143,6 +3146,12 @@ packages:
     name: '@sanity/webhook'
     version: 4.0.0
     engines: {node: '>=18.0.0'}
+    dev: false
+
+  registry.npmjs.org/@studio-freight/lenis@1.0.33:
+    resolution: {integrity: sha512-Pfoimwwsf8oVuneQg3KoigUDlo1S+rE+m2Tz7b+zMNAEi0UAhox+PG/ksLHa8ktQhlsuWODeQFCl8VHBxqOtfw==, tarball: https://registry.npmjs.org/@studio-freight/lenis/-/lenis-1.0.33.tgz}
+    name: '@studio-freight/lenis'
+    version: 1.0.33
     dev: false
 
   registry.npmjs.org/@swc/helpers@0.5.2:
