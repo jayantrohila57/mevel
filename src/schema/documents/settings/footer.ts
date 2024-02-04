@@ -1,8 +1,6 @@
+import footerMenu from '@/schema/objects/navigation/footerMenu'
 import { BlockElementIcon } from '@sanity/icons'
 import { defineField, defineType } from 'sanity'
-
-import menuItemLink from '../../objects/navigation/menuItemLink'
-import menuItemPage from '../../objects/navigation/menuItemPage'
 
 export default defineType({
   name: 'footer',
@@ -12,10 +10,9 @@ export default defineType({
   preview: { prepare: () => ({ title: 'Footer' }) },
   fields: [
     defineField({
-      name: 'links',
-      title: 'Links',
-      type: 'array',
-      of: [{ type: menuItemLink.name }, { type: menuItemPage.name }]
+      name: 'FooterMenu',
+      title: 'Footer',
+      type: footerMenu.name
     }),
     defineField({
       name: 'socialMedia',

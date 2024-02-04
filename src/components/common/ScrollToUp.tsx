@@ -1,9 +1,9 @@
 'use client'
 
 import { ArrowUpCircle } from 'lucide-react'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
-import { Button } from './ui/button'
+import { Button } from '../ui/button'
 
 function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false)

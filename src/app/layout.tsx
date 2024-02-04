@@ -16,7 +16,7 @@ const description: string =
   'Explore the experiences of our satisfied clients and their journey with CodeMevel. Trust our expertise in crafting websites.'
 
 export const viewport: Viewport = {
-  themeColor: '#000000',
+  themeColor: '#000',
   viewportFit: 'cover',
   minimumScale: 1,
   initialScale: 1,
@@ -29,12 +29,12 @@ export const metadata: Metadata = {
   keywords: ['codemevel'],
   applicationName: 'Codemevel',
   manifest: '/manifest.webmanifest.json',
-  icons: [{ rel: 'apple-touch-icon', url: '/logo.svg' }],
+  icons: [{ rel: 'apple-touch-icon', url: '/icon.svg' }],
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
     title,
-    startupImage: ['/logo.svg']
+    startupImage: ['/icon.svg']
   },
   openGraph: {
     title,
@@ -65,9 +65,10 @@ export default function RootLayout({
   return (
     <html
       lang='en'
-      suppressHydrationWarning>
+      suppressHydrationWarning={true}>
       <head />
       <body
+        suppressHydrationWarning={true}
         className={cn(
           'min-h-screen bg-background font-sans slashed-zero  antialiased ',
           fontSans.variable

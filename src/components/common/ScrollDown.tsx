@@ -4,7 +4,7 @@ import Lenis from '@studio-freight/lenis'
 import { ArrowDownCircle } from 'lucide-react'
 import { useCallback, useEffect, useRef } from 'react'
 
-import { Button } from './ui/button'
+import { Button } from '../ui/button'
 
 function ScrollDown({ link }: { link: string }) {
   const lenisRef = useRef<Lenis | null>(null)

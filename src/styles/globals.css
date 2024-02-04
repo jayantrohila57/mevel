@@ -84,7 +84,7 @@ html.lenis {
   background-repeat: repeat;
 }
 ::selection {
-  @apply bg-accent text-black dark:text-white;
+  @apply bg-cyan-500/20 text-accent-foreground;
 }
 
 ::-webkit-scrollbar {
@@ -92,13 +92,14 @@ html.lenis {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-accent;
+  border-radius: 10px;
+  @apply bg-muted;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-black;
+  @apply w-2 bg-black;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply h-2 w-2;
+  @apply bg-white transition-all duration-1000;
 }

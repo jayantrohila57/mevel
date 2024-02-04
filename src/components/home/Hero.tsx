@@ -1,46 +1,40 @@
 import { site } from '@/site.config'
 import { ArrowRightCircle, ExternalLink } from 'lucide-react'
 import Link from 'next/link'
-import React from 'react'
 
-import ScrollDown from '../ScrollDown'
-import { Icons } from '../icons'
+import ScrollDown from '../common/ScrollDown'
 import { Button } from '../ui/button'
 
 const Hero = () => {
   return (
-    <section className='relative   '>
-      <div className='absolute left-80 top-52 h-96 w-96 rounded-full bg-red-500/20' />
-      <div className='absolute right-80 top-20 h-96 w-96 rounded-full bg-blue-500/20' />
-      <div className='absolute -top-0 right-10 h-96 w-96 rounded-full bg-cyan-500/20' />
-      <div className='absolute -top-0 left-10 h-96 w-96 rounded-full bg-violet-500/20' />
+    <section className='relative  overflow-hidden '>
+      <div className='absolute left-80 top-52 h-96 w-96 animate-pulse rounded-full bg-pink-500/30 delay-75' />
+      <div className='absolute right-80 top-24 h-96 w-96 animate-pulse rounded-full bg-blue-500/30' />
+      <div className='absolute -top-0 right-10 h-96 w-96 animate-pulse rounded-full bg-cyan-500/30 delay-75' />
+      <div className='absolute -top-40 left-40 h-96 w-96 animate-pulse rounded-full bg-violet-500/30' />
       <div className='dot-matrix relative flex h-full w-full items-center justify-center backdrop-blur-3xl '>
-        <div className=' flex h-[90vh] w-full flex-col items-center justify-center bg-gradient-to-t from-background via-transparent to-background '>
-          <div className='absolute top-20 z-10 flex items-center gap-2 rounded-full border bg-secondary/20  p-2'>
-            <Link href='/'>
+        <div className='container flex h-[90vh] w-full flex-col items-center justify-center bg-gradient-to-t from-background via-transparent to-background '>
+          <div className='absolute top-10 z-10 flex items-center gap-2 rounded-full border bg-secondary/20 p-2  md:top-10'>
+            <Link href='/blog'>
               <div className='flex flex-row opacity-70 hover:opacity-100'>
-                <span className='mt-0.5 rounded-full  px-2 py-1 text-xs font-semibold leading-none  '>
-                  New
-                </span>
-                <span className='mt-0.5 pr-2 text-sm'>
-                  Checkout Our Latest Blog.
-                </span>
+                <span className='mt-0.5 rounded-full  px-2 py-1 text-xs font-semibold leading-none  '>New</span>
+                <span className='mt-0.5 pr-2 text-sm'>Checkout Our Latest Blog.</span>
                 <ExternalLink className='p-1' />
               </div>
             </Link>
           </div>
-          <h1 className='max-w-4xl scroll-m-20 pb-2 text-center text-4xl font-bold tracking-tight  md:text-5xl'>
+          <h1 className='max-w-5xl scroll-m-20 bg-gradient-to-tr from-primary via-primary to-primary bg-clip-text px-5  pb-2 text-center text-4xl font-bold tracking-tight text-transparent sm:text-6xl md:px-0  md:text-6xl'>
             {site.description}
           </h1>
-          <h2 className='max-w-4xl scroll-m-20 pb-2 text-center text-3xl font-normal tracking-tight opacity-80 first:mt-0'>
+          <h2 className='max-w-5xl scroll-m-20 px-5 py-3 pb-2 text-center text-base font-normal tracking-tight opacity-80 first:mt-0 sm:text-xl md:px-0 md:text-2xl'>
             {site.subHeading}
           </h2>
-          <div className='z-10 flex w-full max-w-5xl flex-row items-center justify-center gap-5 py-2'>
+          <div className='z-10 flex w-full  max-w-5xl flex-col items-center justify-center gap-5 py-5 md:flex-row'>
             <Link
               href='/contact'
               legacyBehavior
               passHref>
-              <Button>
+              <Button className='w-full max-w-80 md:w-auto'>
                 Get Started <ArrowRightCircle className='p-1 ' />
               </Button>
             </Link>
@@ -48,24 +42,15 @@ const Hero = () => {
               href='/contact'
               legacyBehavior
               passHref>
-              <Button variant={'secondary'}>View Pricing</Button>
+              <Button
+                className='w-full max-w-80 md:w-auto'
+                variant={'outline'}>
+                View Pricing
+              </Button>
             </Link>
           </div>
           <div className='absolute bottom-0 z-10'>
             <ScrollDown link='#about' />
-          </div>
-        </div>
-
-        <div className='absolute inset-0 h-full w-full rounded-full border border-x-2 border-secondary-foreground/30 border-x-secondary-foreground/30 p-[5%] sm:[mask-image:linear-gradient(transparent_0%,white_10%,white_90%,transparent_100%)]'>
-          <div className='relative h-full w-full rounded-full border border-x-2 border-secondary-foreground/30 border-x-secondary-foreground/30 p-[5%]'>
-            <Icons.hero6 className='absolute -top-8 left-60 h-20 w-20 fill-primary p-2 transition-all duration-300 hover:scale-105' />
-            <div className='relative h-full w-full rounded-full border border-x-2 border-secondary-foreground/30 border-x-secondary-foreground/30'>
-              <Icons.hero1 className='absolute -bottom-28 left-60 h-20 w-20 fill-primary p-2 transition-all duration-300 hover:scale-105' />
-              <Icons.hero5 className='absolute -right-24 top-28 h-20 w-20 fill-primary p-2 transition-all duration-300 hover:scale-105' />
-              <Icons.hero2 className='absolute -left-10 bottom-32 h-20 w-20 fill-primary p-2 transition-all duration-300 hover:scale-105' />
-              <Icons.hero3 className='absolute -bottom-12 right-40 h-20 w-20 fill-primary p-2 transition-all duration-300 hover:scale-105' />
-              <Icons.hero4 className='absolute -top-24 right-20 h-20 w-20 fill-primary p-2 transition-all duration-300 hover:scale-105' />
-            </div>
           </div>
         </div>
       </div>

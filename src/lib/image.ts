@@ -2,17 +2,25 @@ import createImageUrlBuilder from '@sanity/image-url'
 
 import { dataset, projectId } from '../environment/env'
 
-const imageBuilder = createImageUrlBuilder({
-  projectId: projectId || '',
-  dataset: dataset || ''
-})
-
 interface ImageSource {
   asset?: {
     _ref?: string
   }
 }
 
+/**
+ * Creates an image URL builder for generating URLs to Sanity image assets.
+ * Requires the Sanity project ID and dataset name to be configured.
+ */
+const imageBuilder = createImageUrlBuilder({
+  projectId: projectId || '',
+  dataset: dataset || ''
+})
+
+/**
+ * Generates a URL for the given Sanity image source.
+ * Returns image width, height, and src URL if available.
+ */
 export const urlForImage = (
   source?: ImageSource
 ):
