@@ -57,11 +57,7 @@ export const metadata: Metadata = {
   }
 }
 
-export default function RootLayout({
-  children
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang='en'
@@ -69,10 +65,7 @@ export default function RootLayout({
       <head />
       <body
         suppressHydrationWarning={true}
-        className={cn(
-          'min-h-screen bg-background font-sans slashed-zero  antialiased ',
-          fontSans.variable
-        )}>
+        className={cn('min-h-screen bg-background font-sans slashed-zero  antialiased ', fontSans.variable)}>
         <ThemeProvider
           attribute='class'
           defaultTheme='system'

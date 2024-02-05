@@ -4,16 +4,9 @@ import ScrollToTopButton from '@/components/common/ScrollToUp'
 import Footer from '@/components/layout/Footer'
 import { HeadersNav } from '@/components/layout/Header'
 
-export default async function RootLayout({
-  children
-}: {
-  children: React.ReactNode
-}) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
   // Fetch menu and footer data concurrently
-  const [menuResponse, footerResponse] = await Promise.all([
-    APIFactory().Menu(),
-    APIFactory().footer()
-  ])
+  const [menuResponse, footerResponse] = await Promise.all([APIFactory().Menu(), APIFactory().footer()])
 
   // Extract menu and footer from responses (if available)
   const menu = menuResponse?.menu || []
@@ -22,10 +15,10 @@ export default async function RootLayout({
   return (
     <>
       <HeadersNav menu={menu} />
-      {children}
-      <Footer footer={footer} />
+      <main>{children}</main>
       <Scroll />
       <ScrollToTopButton />
+      <Footer footer={footer} />
     </>
   )
 }

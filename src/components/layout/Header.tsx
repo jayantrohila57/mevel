@@ -13,7 +13,7 @@ import MobileMenu from './mobileMenu'
 
 export function HeadersNav({ menu }: INavigationMenu) {
   return (
-    <nav className='sticky top-0 z-50 w-full  '>
+    <nav className='fixed top-0 z-50 w-full'>
       <div className='flex h-14 w-full flex-row items-center justify-between  backdrop-blur-lg md:px-5'>
         <Link href='/'>
           <Button variant='ghost'>

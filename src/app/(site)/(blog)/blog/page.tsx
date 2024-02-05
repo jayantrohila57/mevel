@@ -1,14 +1,5 @@
-import GoBack from '@/components/common/GoBack'
+import BlogLayout from '@/components/blog/blogGrid'
 
-import BlogLayout from '../../../../../temp/BlogLayout'
-
-const BlogPage = () => {
-  return (
-    <div className='relative h-screen'>
-      <GoBack link='/' />
-      <BlogLayout />
-    </div>
-  )
-}
+const BlogPage = () => <BlogLayout />
 
 export default BlogPage

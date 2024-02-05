@@ -7,14 +7,14 @@ import { Button } from '../ui/button'
 
 const Hero = () => {
   return (
-    <section className='relative  overflow-hidden '>
+    <section className='relative h-full w-full'>
       <div className='absolute left-80 top-52 h-96 w-96 animate-pulse rounded-full bg-pink-500/30 delay-75' />
       <div className='absolute right-80 top-24 h-96 w-96 animate-pulse rounded-full bg-blue-500/30' />
       <div className='absolute -top-0 right-10 h-96 w-96 animate-pulse rounded-full bg-cyan-500/30 delay-75' />
       <div className='absolute -top-40 left-40 h-96 w-96 animate-pulse rounded-full bg-violet-500/30' />
       <div className='dot-matrix relative flex h-full w-full items-center justify-center backdrop-blur-3xl '>
-        <div className='container flex h-[90vh] w-full flex-col items-center justify-center bg-gradient-to-t from-background via-transparent to-background '>
-          <div className='absolute top-10 z-10 flex items-center gap-2 rounded-full border bg-secondary/20 p-2  md:top-10'>
+        <div className='flex h-[90vh] w-full flex-col items-center justify-center bg-gradient-to-t from-background via-transparent to-background '>
+          <div className='absolute top-10 z-10 flex items-center gap-2 rounded-full border bg-secondary/20 p-2  md:top-28'>
             <Link href='/blog'>
               <div className='flex flex-row opacity-70 hover:opacity-100'>
                 <span className='mt-0.5 rounded-full  px-2 py-1 text-xs font-semibold leading-none  '>New</span>
