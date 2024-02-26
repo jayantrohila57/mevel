@@ -10,7 +10,7 @@ export interface GlobalSEOScheme {
 
 export default defineType({
   name: 'globalSEO',
-  title: 'Global SEO',
+  title: 'Site SEO',
   type: 'document',
   icon: TrendUpwardIcon,
   fields: [

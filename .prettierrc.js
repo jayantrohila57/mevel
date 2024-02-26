@@ -1,6 +1,13 @@
 /** @type {import('prettier').Config & import('prettier-plugin-tailwindcss').PluginOptions} */
+/**
+ * Prettier configuration object.
+ *
+ * Defines code formatting rules for Prettier.
+ *
+ * Exports an object with Prettier options to control formatting behavior.
+ */
 module.exports = {
-  printWidth: 80,
+  printWidth: 120,
   endOfLine: 'auto',
   arrowParens: 'always',
   trailingComma: 'none',
@@ -13,7 +20,7 @@ module.exports = {
   semi: false,
   singleQuote: true,
   bracketSpacing: true,
-  importOrder: ['^@core/(.*)$', '^@components/(.*)$', '^@ui/(.*)$', '^[./]'],
+  importOrder: ['^@core/(.*)$', '^[./]', '^@ui/(.*)$', '^@components/(.*)$'],
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
   plugins: [
