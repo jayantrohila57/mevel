@@ -9,9 +9,10 @@ export const defaultDocumentNode: DefaultDocumentNodeResolver = (
   { schemaType }
 ) => {
   switch (schemaType) {
-    case 'article':
-    case 'artistPage':
-    case 'exhibitionPage':
+    case 'page':
+    case 'author':
+    case 'home':
+    case 'blog':
       return S.document().views([
         S.view.form(),
         S.view.component(Iframe).options(iframeOptions).title('Draft View')

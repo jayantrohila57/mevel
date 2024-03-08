@@ -21,6 +21,7 @@ export const generalStructure = (S: StructureBuilder) =>
   S.list()
     .title('Website Content')
     .items([
+      S.divider(),
       S.listItem()
         .title('Home page')
         .icon(HomeIcon)
@@ -182,7 +183,6 @@ export const generalStructure = (S: StructureBuilder) =>
                 )
             ])
         ),
-      S.divider(),
       S.listItem()
         .title('Site Settings')
         .icon(CogIcon)
