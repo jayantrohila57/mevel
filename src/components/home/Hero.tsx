@@ -13,8 +13,8 @@ const Hero = () => {
       <div className='absolute -top-0 right-10 h-96 w-96 animate-pulse rounded-full bg-cyan-500/30 delay-75' />
       <div className='absolute -top-40 left-40 h-96 w-96 animate-pulse rounded-full bg-violet-500/30' />
       <div className='dot-matrix relative flex h-full w-full items-center justify-center backdrop-blur-3xl '>
-        <div className='flex h-[90vh] w-full flex-col items-center justify-center bg-gradient-to-t from-background via-transparent to-background '>
-          <div className='absolute top-10 z-10 flex items-center gap-2 rounded-full border bg-secondary/20 p-2  md:top-28'>
+        <div className='flex h-screen w-full flex-col items-center justify-center bg-gradient-to-t from-background via-transparent to-background pt-20 md:pt-0 '>
+          <div className='absolute top-20 z-10 flex items-center gap-2 rounded-full border bg-secondary/20 p-2  md:top-28'>
             <Link href='/blog'>
               <div className='flex flex-row opacity-70 hover:opacity-100'>
                 <span className='mt-0.5 rounded-full  px-2 py-1 text-xs font-semibold leading-none  '>New</span>
@@ -23,10 +23,10 @@ const Hero = () => {
               </div>
             </Link>
           </div>
-          <h1 className='max-w-5xl scroll-m-20 bg-gradient-to-tr from-primary via-primary to-primary bg-clip-text px-5  pb-2 text-center text-4xl font-bold tracking-tight text-transparent sm:text-6xl md:px-0  md:text-6xl'>
+          <h1 className='max-w-5xl scroll-m-20 bg-gradient-to-tr from-primary via-primary to-primary bg-clip-text px-5  pb-2 text-center text-5xl font-bold tracking-tight text-transparent sm:text-6xl md:px-0  md:text-7xl'>
             {site.description}
           </h1>
-          <h2 className='max-w-5xl scroll-m-20 px-5 py-3 pb-2 text-center text-base font-normal tracking-tight opacity-80 first:mt-0 sm:text-xl md:px-0 md:text-2xl'>
+          <h2 className='max-w-5xl scroll-m-20 px-5 py-3 pb-2 text-center text-lg font-normal tracking-tight opacity-80 first:mt-0 sm:text-xl md:px-0 md:text-2xl'>
             {site.subHeading}
           </h2>
           <div className='z-10 flex w-full  max-w-5xl flex-col items-center justify-center gap-5 py-5 md:flex-row'>
