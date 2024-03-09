@@ -29,25 +29,12 @@ import social from './objects/seo/social'
  * Exports an array containing document schema type definitions
  * for page documents like pages, blogs, categories etc.
  */
-export const pageDocuments: DocumentDefinition[] = [
-  page,
-  blog,
-  category,
-  tag,
-  faq,
-  author
-]
+export const pageDocuments: DocumentDefinition[] = [page, blog, category, tag, faq, author]
 /**
  * Exports an array containing object schema type definitions.
  * Objects define reusable content types that can be nested in document schema types.
  */
-export const objects: ObjectDefinition[] = [
-  seo,
-  menu,
-  accordion,
-  youtube,
-  footerMenu
-]
+export const objects: ObjectDefinition[] = [seo, menu, accordion, youtube, footerMenu]
 
 /**
  * Exports an array containing image schema type definitions.
@@ -64,12 +51,7 @@ export const components: ArrayDefinition[] = [social, blockContent]
  * Exports an array containing singleton document schema type definitions.
  * Singleton documents have a single instance in the studio.
  */
-export const singletonDocuments: DocumentDefinition[] = [
-  navigation,
-  footer,
-  globalSEO,
-  home
-]
+export const singletonDocuments: DocumentDefinition[] = [navigation, footer, globalSEO, home]
 
 /**
  * Exports an array containing all schema type definitions, by concatenating all the schema type arrays.

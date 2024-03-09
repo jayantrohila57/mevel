@@ -1,8 +1,9 @@
-import { cn } from '@/lib/utils'
-import { ThemeProvider } from '@/providers/theme-provider'
-import '@/styles/globals.css'
-import type { Metadata, Viewport } from 'next'
-import { Poppins } from 'next/font/google'
+import { cn } from '@/lib/utils';
+import { ThemeProvider } from '@/providers/theme-provider';
+import '@/styles/globals.css';
+import type { Metadata, Viewport } from 'next';
+import { Poppins } from 'next/font/google';
+
 
 const fontSans = Poppins({
   subsets: ['latin'],
@@ -11,9 +12,9 @@ const fontSans = Poppins({
   preload: true,
   display: 'swap'
 })
-const title: string = 'CodeMevel - Building Trust with Exceptional Web Services'
+const title: string = 'Codemevel - Building Trust with Exceptional Web Services'
 const description: string =
-  'Explore the experiences of our satisfied clients and their journey with CodeMevel. Trust our expertise in crafting websites.'
+  'Explore the experiences of our satisfied clients and their journey with Codemevel. Trust our expertise in crafting websites.'
 
 export const viewport: Viewport = {
   themeColor: '#000',
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     title,
     description,
     emails: 'codemevel@gmail.com',
-    siteName: 'CodeMevel',
+    siteName: 'Codemevel',
     type: 'website',
     url: '/'
   },

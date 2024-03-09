@@ -15,8 +15,7 @@ export default defineType({
       name: 'title',
       title: 'Primary Title',
       type: 'string',
-      description:
-        'Primary Title of the page. On cards, it is displayed as Primary Title.',
+      description: 'Primary Title of the page. On cards, it is displayed as Primary Title.',
       group: 'content',
       validation: (rule) => rule.required()
     }),
@@ -24,16 +23,14 @@ export default defineType({
       name: 'subtitle',
       title: 'Primary Subtitle',
       type: 'string',
-      description:
-        'Primary Subtitle of the page. On cards, it is displayed as Primary Subtitle.',
+      description: 'Primary Subtitle of the page. On cards, it is displayed as Primary Subtitle.',
       group: 'content'
     }),
     defineField({
       name: 'summary',
       title: 'Description',
       group: 'content',
-      description:
-        'This is used to describe the page and appears as the text in page cards.',
+      description: 'This is used to describe the page and appears as the text in page cards.',
       type: 'text'
     }),
     defineField({

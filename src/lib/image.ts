@@ -23,9 +23,7 @@ const imageBuilder = createImageUrlBuilder({
  */
 export const urlForImage = (
   source?: ImageSource
-):
-  | { src?: string | undefined; width?: number; height?: number }
-  | undefined => {
+): { src?: string | undefined; width?: number; height?: number } | undefined => {
   if (!source || !source.asset) {
     return undefined
   }
@@ -39,11 +37,7 @@ export const urlForImage = (
   const width = parseInt(widthStr, 10)
   const height = parseInt(heightStr, 10)
 
-  const url = imageBuilder
-    ?.image(source)
-    ?.auto('format')
-    ?.width(Math.min(width, 2000))
-    ?.url()
+  const url = imageBuilder?.image(source)?.auto('format')?.width(Math.min(width, 2000))?.url()
 
   return {
     src: url,

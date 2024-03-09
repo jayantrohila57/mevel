@@ -1,11 +1,6 @@
 'use client'
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger
-} from '@/components/ui/accordion'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -13,12 +8,7 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle
 } from '@/components/ui/navigation-menu'
-import {
-  Sheet,
-  SheetContent,
-  SheetFooter,
-  SheetTrigger
-} from '@/components/ui/sheet'
+import { Sheet, SheetContent, SheetFooter, SheetTrigger } from '@/components/ui/sheet'
 import { site } from '@/site.config'
 import type { INavigationMenu } from '@/types/navigation.interface'
 import { MenuIcon } from 'lucide-react'
@@ -44,9 +34,7 @@ const MobileMenu = ({ menu }: INavigationMenu) => {
               <div className='my-2 text-base font-medium'>
                 <span>{site.name}</span>
               </div>
-              <p className='text-xs leading-tight text-muted-foreground'>
-                {site.description}
-              </p>
+              <p className='text-xs leading-tight text-muted-foreground'>{site.description}</p>
             </div>
             <Accordion
               type='single'
@@ -61,11 +49,8 @@ const MobileMenu = ({ menu }: INavigationMenu) => {
                       <NavigationMenuItem className='w-full'>
                         {submenu ? (
                           <AccordionTrigger className='py-2'>
-                            <NavigationMenuLink
-                              className={navigationMenuTriggerStyle()}>
-                              {title
-                                ? title
-                                : (page && page?.title) || 'No Title'}
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                              {title ? title : (page && page?.title) || 'No Title'}
                             </NavigationMenuLink>
                           </AccordionTrigger>
                         ) : (
@@ -77,11 +62,8 @@ const MobileMenu = ({ menu }: INavigationMenu) => {
                               target={newTab ? '_blank' : '_self'}
                               legacyBehavior
                               passHref>
-                              <NavigationMenuLink
-                                className={navigationMenuTriggerStyle()}>
-                                {title
-                                  ? title
-                                  : (page && page?.title) || 'No Title'}
+                              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                {title ? title : (page && page?.title) || 'No Title'}
                               </NavigationMenuLink>
                             </Link>
                           </div>
@@ -90,36 +72,20 @@ const MobileMenu = ({ menu }: INavigationMenu) => {
                           {submenu && (
                             <ul className='grid w-full grid-cols-2 gap-2 rounded-xl border p-2'>
                               {submenu &&
-                                submenu.map(
-                                  ({
-                                    title,
-                                    slug,
-                                    description,
-                                    newTab,
-                                    page
-                                  }) => {
-                                    return (
-                                      <ListItem
-                                        key={title + slug}
-                                        href={
-                                          slug || (page && page.slug) || '/'
-                                        }
-                                        title={
-                                          title ||
-                                          (page && page.title) ||
-                                          'No Link'
-                                        }
-                                        target={newTab ? '_blank' : '_self'}>
-                                        <p className='text-xs'>
-                                          {' '}
-                                          {description ||
-                                            (page && page.description) ||
-                                            'No Description'}
-                                        </p>
-                                      </ListItem>
-                                    )
-                                  }
-                                )}
+                                submenu.map(({ title, slug, description, newTab, page }) => {
+                                  return (
+                                    <ListItem
+                                      key={title + slug}
+                                      href={slug || (page && page.slug) || '/'}
+                                      title={title || (page && page.title) || 'No Link'}
+                                      target={newTab ? '_blank' : '_self'}>
+                                      <p className='text-xs'>
+                                        {' '}
+                                        {description || (page && page.description) || 'No Description'}
+                                      </p>
+                                    </ListItem>
+                                  )
+                                })}
                             </ul>
                           )}
                         </AccordionContent>

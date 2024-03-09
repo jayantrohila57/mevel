@@ -26,9 +26,7 @@ const DesktopMenu = ({ menu }: INavigationMenu) => {
             return (
               <NavigationMenuItem key={slug + title}>
                 {submenu ? (
-                  <NavigationMenuTrigger>
-                    {title ? title : (page && page?.title) || 'No Title'}
-                  </NavigationMenuTrigger>
+                  <NavigationMenuTrigger>{title ? title : (page && page?.title) || 'No Title'}</NavigationMenuTrigger>
                 ) : (
                   <Link
                     key={title + slug}
@@ -37,8 +35,7 @@ const DesktopMenu = ({ menu }: INavigationMenu) => {
                     target={newTab ? '_blank' : '_self'}
                     legacyBehavior
                     passHref>
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}>
+                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                       {title ? title : (page && page?.title) || 'No Title'}
                     </NavigationMenuLink>
                   </Link>
@@ -53,37 +50,27 @@ const DesktopMenu = ({ menu }: INavigationMenu) => {
                               className='flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md'
                               href='/'>
                               <Icons.logo className='h-40 w-40' />
-                              <div className='mb-2 mt-4 text-2xl font-medium'>
-                                {site.name}
-                              </div>
-                              <p className='text-base leading-tight text-muted-foreground'>
-                                {site.description}
-                              </p>
+                              <div className='mb-2 mt-4 text-2xl font-medium'>{site.name}</div>
+                              <p className='text-base leading-tight text-muted-foreground'>{site.description}</p>
                             </a>
                           </NavigationMenuLink>
                         </li>
                       )}
                       {submenu &&
-                        submenu.map(
-                          ({ title, slug, description, newTab, page }) => {
-                            return (
-                              <ListItem
-                                key={title + slug}
-                                href={slug || (page && page.slug) || '/'}
-                                title={
-                                  title || (page && page.title) || 'No Link'
-                                }
-                                target={newTab ? '_blank' : '_self'}>
-                                <p className='text-xs'>
-                                  {' '}
-                                  {description ||
-                                    (page && page.description) ||
-                                    'No Description'}
-                                </p>
-                              </ListItem>
-                            )
-                          }
-                        )}
+                        submenu.map(({ title, slug, description, newTab, page }) => {
+                          return (
+                            <ListItem
+                              key={title + slug}
+                              href={slug || (page && page.slug) || '/'}
+                              title={title || (page && page.title) || 'No Link'}
+                              target={newTab ? '_blank' : '_self'}>
+                              <p className='text-xs'>
+                                {' '}
+                                {description || (page && page.description) || 'No Description'}
+                              </p>
+                            </ListItem>
+                          )
+                        })}
                     </ul>
                   </NavigationMenuContent>
                 )}

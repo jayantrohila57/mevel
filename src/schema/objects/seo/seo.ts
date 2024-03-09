@@ -37,8 +37,7 @@ export default defineType({
     {
       name: 'openGraph',
       title: 'Open Graph Protocol Fields',
-      description:
-        'The Open Graph protocol enables any web page to become a rich object in a social graph.',
+      description: 'The Open Graph protocol enables any web page to become a rich object in a social graph.',
       options: {
         collapsible: true,
         collapsed: false
@@ -64,9 +63,7 @@ export default defineType({
         'The meta description for this page. Maximum 160 characters. If left empty, will default to global description.',
       type: `text`,
       validation: (Rule) => [
-        Rule.max(160).warning(
-          'Description should be less than 160 characters.'
-        ),
+        Rule.max(160).warning('Description should be less than 160 characters.'),
         Rule.min(5).warning('Description should be at least 5 characters')
       ]
     }),
@@ -75,9 +72,7 @@ export default defineType({
       title: `H1 Header`,
       description: 'The H1 header for this page. Maximum 60 characters.',
       type: `text`,
-      validation: (Rule) => [
-        Rule.max(60).warning('The H1 header should be less than 60 characters.')
-      ]
+      validation: (Rule) => [Rule.max(60).warning('The H1 header should be less than 60 characters.')]
     }),
     defineField({
       name: 'robotsNoIndex',
@@ -109,11 +104,7 @@ export default defineType({
         'This is the title presented in search, Open Graph, Twitter and other social for this page when shared. If left empty, will default to global title.',
       type: `string`,
       fieldset: 'openGraph',
-      validation: (Rule) => [
-        Rule.max(60).warning(
-          `Social title shouldn't be more than 60 characters.`
-        )
-      ]
+      validation: (Rule) => [Rule.max(60).warning(`Social title shouldn't be more than 60 characters.`)]
     }),
     defineField({
       name: `socialDescription`,
@@ -123,12 +114,8 @@ export default defineType({
       type: `text`,
       fieldset: 'openGraph',
       validation: (Rule) => [
-        Rule.max(75).warning(
-          'Social description should be less than 75 characters.'
-        ),
-        Rule.min(5).warning(
-          'Social description should be at least 5 characters'
-        )
+        Rule.max(75).warning('Social description should be less than 75 characters.'),
+        Rule.min(5).warning('Social description should be at least 5 characters')
       ]
     })
   ]

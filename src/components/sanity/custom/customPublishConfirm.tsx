@@ -1,9 +1,7 @@
 import { useState } from 'react'
 import type { DocumentActionComponent, DocumentActionProps } from 'sanity'
 
-export function customPublishConfirm(
-  originalPublishAction: DocumentActionComponent
-) {
+export function customPublishConfirm(originalPublishAction: DocumentActionComponent) {
   const CustomPublishAction = (props: DocumentActionProps) => {
     const [dialogOpen, setDialogOpen] = useState(false)
     const originalResult = originalPublishAction(props)

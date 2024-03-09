@@ -14,9 +14,7 @@ function assertValue<T>(v: T | undefined, errorMessage: string): T {
  * using HTTPS in production/preview or HTTP otherwise.
  */
 export const envHost = `http${
-  ['production', 'preview'].includes(process.env.SANITY_STUDIO_VERCEL_ENV || '')
-    ? 's'
-    : ''
+  ['production', 'preview'].includes(process.env.SANITY_STUDIO_VERCEL_ENV || '') ? 's' : ''
 }://${process.env.SANITY_STUDIO_VERCEL_URL}`
 
 /**
@@ -24,9 +22,7 @@ export const envHost = `http${
  * using HTTPS in production/preview or HTTP otherwise.
  */
 export const baseUrl = `http${
-  ['production', 'preview'].includes(process.env.SANITY_STUDIO_VERCEL_ENV || '')
-    ? 's'
-    : ''
+  ['production', 'preview'].includes(process.env.SANITY_STUDIO_VERCEL_ENV || '') ? 's' : ''
 }://${process.env.SANITY_STUDIO_VERCEL_URL}`
 
 /** The base path for the Sanity Studio. */
@@ -44,12 +40,10 @@ export const previewSecretId: `${string}.${string}` = 'preview.secret'
 /**
  * The base URL for previewing drafts of unpublished content in the studio.
  */
-export const SANITY_STUDIO_PREVIEW_BASE_URL =
-  process.env.SANITY_STUDIO_PREVIEW_BASE_URL || '/api/draft'
+export const SANITY_STUDIO_PREVIEW_BASE_URL = process.env.SANITY_STUDIO_PREVIEW_BASE_URL || '/api/draft'
 
 /** The API version used to access the Sanity API. */
-export const apiVersion =
-  process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2024-01-06'
+export const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2024-01-06'
 
 /**
  * Asserts that the provided value is defined, and throws an error if not.

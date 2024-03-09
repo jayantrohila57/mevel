@@ -9,10 +9,10 @@ import type { MetadataRoute } from 'next'
  */
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'CodeMevel - Building Trust with Exceptional Web Services',
+    name: 'Codemevel - Building Trust with Exceptional Web Services',
     short_name: 'Codemevel',
     description:
-      'Explore the experiences of our satisfied clients and their journey with CodeMevel. Trust our expertise in crafting websites.',
+      'Explore the experiences of our satisfied clients and their journey with Codemevel. Trust our expertise in crafting websites.',
     start_url: '/',
     scope: '/',
     display: 'standalone',

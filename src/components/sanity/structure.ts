@@ -28,13 +28,7 @@ export const generalStructure = (S: StructureBuilder) =>
         .child(
           S.document()
             .schemaType('home')
-            .views([
-              S.view.form(),
-              S.view
-                .component(Iframe)
-                .options(iframeOptions)
-                .title('Draft View')
-            ])
+            .views([S.view.form(), S.view.component(Iframe).options(iframeOptions).title('Draft View')])
             .documentId('home')
         ),
       S.listItem()
@@ -50,13 +44,7 @@ export const generalStructure = (S: StructureBuilder) =>
               S.document()
                 .id(childId)
                 .schemaType('page')
-                .views([
-                  S.view.form(),
-                  S.view
-                    .component(Iframe)
-                    .options(iframeOptions)
-                    .title('Draft View')
-                ])
+                .views([S.view.form(), S.view.component(Iframe).options(iframeOptions).title('Draft View')])
             )
         ),
       S.listItem()
@@ -79,13 +67,7 @@ export const generalStructure = (S: StructureBuilder) =>
                       S.document()
                         .id(childId)
                         .schemaType('blog')
-                        .views([
-                          S.view.form(),
-                          S.view
-                            .component(Iframe)
-                            .options(iframeOptions)
-                            .title('Draft View')
-                        ])
+                        .views([S.view.form(), S.view.component(Iframe).options(iframeOptions).title('Draft View')])
                     )
                 ),
               S.listItem()
@@ -101,13 +83,7 @@ export const generalStructure = (S: StructureBuilder) =>
                       S.document()
                         .id(childId)
                         .schemaType('author')
-                        .views([
-                          S.view.form(),
-                          S.view
-                            .component(Iframe)
-                            .options(iframeOptions)
-                            .title('Draft View')
-                        ])
+                        .views([S.view.form(), S.view.component(Iframe).options(iframeOptions).title('Draft View')])
                     )
                 ),
               S.listItem()
@@ -123,13 +99,7 @@ export const generalStructure = (S: StructureBuilder) =>
                       S.document()
                         .id(childId)
                         .schemaType('category')
-                        .views([
-                          S.view.form(),
-                          S.view
-                            .component(Iframe)
-                            .options(iframeOptions)
-                            .title('Draft View')
-                        ])
+                        .views([S.view.form(), S.view.component(Iframe).options(iframeOptions).title('Draft View')])
                     )
                 ),
               S.listItem()
@@ -145,13 +115,7 @@ export const generalStructure = (S: StructureBuilder) =>
                       S.document()
                         .id(childId)
                         .schemaType('tag')
-                        .views([
-                          S.view.form(),
-                          S.view
-                            .component(Iframe)
-                            .options(iframeOptions)
-                            .title('Draft View')
-                        ])
+                        .views([S.view.form(), S.view.component(Iframe).options(iframeOptions).title('Draft View')])
                     )
                 ),
               S.divider()
@@ -174,12 +138,7 @@ export const generalStructure = (S: StructureBuilder) =>
                     .apiVersion(apiVersion)
                     .filter('_type == "faq"')
                     .defaultOrdering([{ field: 'name', direction: 'asc' }])
-                    .child((childId) =>
-                      S.document()
-                        .id(childId)
-                        .schemaType('faq')
-                        .views([S.view.form()])
-                    )
+                    .child((childId) => S.document().id(childId).schemaType('faq').views([S.view.form()]))
                 )
             ])
         ),
@@ -193,15 +152,11 @@ export const generalStructure = (S: StructureBuilder) =>
               S.listItem()
                 .title('Global SEO')
                 .icon(TrendUpwardIcon)
-                .child(
-                  S.document().schemaType('globalSEO').documentId('globalSEO')
-                ),
+                .child(S.document().schemaType('globalSEO').documentId('globalSEO')),
               S.listItem()
                 .title('Main Navigation')
                 .icon(BlockElementIcon)
-                .child(
-                  S.document().schemaType('navigation').documentId('navigation')
-                ),
+                .child(S.document().schemaType('navigation').documentId('navigation')),
               S.listItem()
                 .title('Footer Links')
                 .icon(BlockElementIcon)
